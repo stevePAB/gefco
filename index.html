@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
+
+<style>
+	
+body		{	margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Titillium Web', sans-serif;
+			}
+	
+.content	{	margin: 0 auto;
+				width: 720px;
+				height: 100%;
+				overflow: auto;
+			}
+	
+.gefco-box	{	width: 100px;
+				height: 100px;
+				background:url(links/gefco-logo.jpg);
+				margin-top: 30px;
+			}	
+	
+.header		{	margin: 0 auto;
+				width:calc( 100% - 30px);
+				height: auto;
+				margin-top: 30px;	
+			}
+	
+.column		{	width: 230px;
+				height: auto;
+				display: inline-block;
+			}
+	
+.pdf-image	{	width: 210px;
+				padding-top: 129%;
+				box-shadow: 0px 0px 5px 1px rgb(40,40,40);					
+			}
+	
+.pdf-image:hover	{	cursor: pointer;
+						box-shadow: 0px 0px 7px 1px rgb(0,0,0);
+					}
+	
+.pdf-info	{	width: calc( 100% - 20px);
+				overflow: auto;
+			}
+	
+#pdf-1		{	background:url(links/pdf-images-1.jpg);
+				background-position: center;
+				background-size: cover;
+			}	
+	
+#pdf-2		{	margin: 0 auto;
+				background:url(links/pdf-images-2.jpg);
+				background-position: center;
+				background-size: cover;
+			}	
+	
+#pdf-info-2	{	margin:0 auto;
+			}
+	
+#pdf-3		{	margin-left:20px;
+				background:url(links/pdf-images-3.jpg);
+				background-position: center;
+				background-size: cover;
+			}	
+	
+#pdf-info-3	{	margin-left:20px;
+			}	
+	
+.pdf-title	{	width:70%;
+				background: white;
+				margin: 0 auto;
+				margin-top:25px;
+				border-radius: 3px;
+				box-shadow: inset 1px 1px 5px 1px grey;
+				box-shadow: 1px 1px 5px 1px rgb(40,40,40);
+			}	
+	
+.pdf-title:hover	{	cursor: pointer;
+						box-shadow: 0px 0px 7px 1px rgb(0,0,0);
+					}	
+	
+	
+.text		{	width: 100%;
+				font-size: 2.4em;
+				text-align: center;
+				line-height: 1.05em;
+				color: white;
+				-webkit-transform:scale(0.8,1); /* Safari and Chrome */
+    			-moz-transform:scale(0.8,1); /* Firefox */
+    			-ms-transform:scale(0.8,1); /* IE 9 */
+    			-o-transform:scale(0.8,1); /* Opera */
+    			transform:scale(0.8,1); /* W3C */
+			}	
+
+.text-button{	font-size: 16px;
+				text-align: center;
+				line-height: 2.2em;	
+			}	
+	
+@media only screen and (max-width: 760px) {
+
+	.content	{	width: 100%;
+				}
+
+	.column		{	width: 33%;
+				}
+	
+	.pdf-image	{	width: calc( 100% - 20px);
+				}
+	
+	.text-button{	font-size: 12px;
+				}
+	}
+	
+@media only screen and (max-width: 690px) {
+	
+	.text		{	font-size: 2em;	
+				}
+	}	
+	
+@media only screen and (max-width: 552px) {
+	
+	.text		{	font-size: 1.6em;	
+				}
+	}	
+
+@media only screen and (max-width: 590px) {
+	
+	.text-button{	font-size: 10px;	
+				}
+	}	
+	
+@media only screen and (max-width: 400px) {
+	
+	.text-button{	font-size: 8px;	
+				}
+	}		
+	
+/* Styling for the PHP Form */	
+	
+.errorbg 	{	background-color: red;
+			}	
+	
+#telephoneNumber	{	width: calc( 100% - 40px);
+						border: none;
+						background: rgba(255,255,255,0.90);
+						height:46px;
+						padding-left: 20px;
+						padding-right: 20px;
+						box-shadow: 0px 0px 5px 1px rgb(40,40,40);					
+
+					}
+	
+#customerName		{	width: calc( 100% - 40px);
+						border: none;
+						background: rgba(255,255,255,0.90);
+						height:46px;
+						padding-left: 20px;
+						padding-right: 20px;
+						margin-top: 10px;
+						box-shadow: 0px 0px 5px 1px rgb(40,40,40);					
+
+					}
+	
+#email				{	width: calc( 100% - 40px);
+						border: none;
+						background: rgba(255,255,255,0.90);
+						height:46px;
+						padding-left: 20px;
+						padding-right: 20px;
+						margin-top: 10px;
+						box-shadow: 0px 0px 5px 1px rgb(40,40,40);					
+
+
+					}
+	
+#company			{	width: calc( 100% - 40px);
+						border: none;
+						background: rgba(255,255,255,0.90);
+						height:46px;
+						padding-left: 20px;
+						padding-right: 20px;
+						margin-top: 10px;
+						box-shadow: 0px 0px 5px 1px rgb(40,40,40);					
+
+					}	
+
+	
+::-webkit-input-placeholder 	{ /* WebKit, Blink, Edge */
+   									color: black;
+									font-family: 'Titillium Web', sans-serif;
+								}
+	
+:-moz-placeholder 				{ /* Mozilla Firefox 4 to 18 */
+   									color: black;
+									font-family: 'Titillium Web', sans-serif;
+									opacity: 1;
+								}
+	
+::-moz-placeholder 				{ /* Mozilla Firefox 19+ */
+									color: black;
+									font-family: 'Titillium Web', sans-serif;
+   									opacity:  1;
+								}
+	
+:-ms-input-placeholder 			{ /* Internet Explorer 10-11 */
+   									color: black;
+									font-family: 'Titillium Web', sans-serif;
+								}
+	
+::-ms-input-placeholder 		{ /* Microsoft Edge */
+   									color: black;
+									font-family: 'Titillium Web', sans-serif;
+								}	
+	
+#form-text	{	color: rgba(255,255,255,1.00);
+				width: 100%;
+				text-align: center;
+			}		
+	
+.submit		{	width: 147px; 
+				border: none;
+				height: 35px;
+				display: block;
+				margin: 0 auto;
+				font-size: 16px;
+				background: white;
+				border-radius: 3px;
+				box-shadow: inset 1px 1px 5px 1px grey;
+				box-shadow: 1px 1px 5px 1px rgb(40,40,40);
+	}
+	
+.submit:hover	{	cursor: pointer;
+						box-shadow: 0px 0px 7px 1px rgb(0,0,0);
+					}		
+	
+</style>
+
+
+<script type="text/javascript">
+		
+		// check the form has been filled in
+	function validateForm() {
+		// check the telephone number has been filled in
+		if (document.forms["myForm"]["telephoneNumber"].value == "") {
+			document.getElementById("telephoneNumber").className += " errorbg";
+			return false;
+		} else {
+			document.getElementById("telephoneNumber").className -= " errorbg";
+		}
+		// check the name has been filled in		
+		if (document.forms["myForm"]["customerName"].value == "") {
+			document.getElementById("customerName").className += " errorbg";
+			return false;
+		}else {
+			document.getElementById("customerName").className -= " errorbg";
+		}
+		// check the email has been filled in
+		
+			var x=document.forms["myForm"]["email"].value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+		if (x==''||x=='Email address'||atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length ){
+			document.getElementById("email").className += " errorbg";
+			return false;
+		}else {
+			document.getElementById("email").className -= " errorbg";
+		}
+		// check the company name has been filled in
+		if (document.forms["myForm"]["company"].value == "") {
+			document.getElementById("company").className += " errorbg";
+			return false;
+		}else {
+			document.getElementById("company").className -= " errorbg";
+		}
+	} 
+
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<title>GEFCO Landing Page</title>
+</head>
+
+<body>
+
+	<div style="height: 160px; background: white;">
+		<div class="content">
+			<div style="width:100px; height:100px; margin-left: 15px;">
+				<a href="https://uk.gefco.net/"><div class="gefco-box"></div></a>	
+			</div>	
+		</div>
+	</div>
+
+	<div style="height: auto; background:url(links/car-background.jpg); background-size: cover; background-position: center; ">
+		<div class="content">
+			<div class="header">
+				<p class="text">PLEASE CLICK ON ANY OF THE BELOW DOCUMENTS TO VIEW OUR SERVICES</p>
+			</div>
+			<div style="height: auto; width: calc( 100% - 30px); margin: 0 auto; margin-top: 30px;">
+				<div class="column">
+					<a href="links/new-vehicle-preparation.pdf" download>
+						<div class="pdf-image" id="pdf-1">
+						</div>
+					</a>
+					<div class="pdf-info" id="pdf-info-1">
+						<div class="pdf-title">
+							<a href="links/new-vehicle-preparation.pdf" download style="text-decoration: none; color: black;">
+								<p class="text-button">VEHICLE PREP</p>
+							</a>	
+						</div>
+					</div>
+				</div><div class="column">
+					<a href="links/finished-vehicle-logistics.pdf" download>
+						<div class="pdf-image" id="pdf-2">
+						</div>
+					</a>	
+					<div class="pdf-info" id="pdf-info-2">
+						<div class="pdf-title">
+							<a href="links/finished-vehicle-logistics.pdf" download style="text-decoration: none; color: black;">
+								<p class="text-button">BODY SHOP</p>
+							</a>	
+						</div>
+					</div>
+				</div><div class="column">
+					<a href="links/fleet-importers-solutions.pdf" download>
+						<div class="pdf-image" id="pdf-3">
+						</div>
+					</a>
+					<div class="pdf-info" id="pdf-info-3">
+						<div class="pdf-title">
+							<a href="links/fleet-importers-solutions.pdf" download style="text-decoration: none; color: black;">
+								<p class="text-button">LOGISTICS</p>
+							</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="header">
+				<p class="text">IF YOU WOULD LIKE TO FIND OUT MORE OR HAVE ANY QUESTIONS PLEASE REGISTER YOUR INTEREST BELOW</p>
+			</div>
+			<div style="height: auto; width: calc( 100% - 30px); margin: 0 auto; margin-top: 30px; margin-bottom: 30px">
+			
+				<form name="myForm" action="thankyou.php" onsubmit="return validateForm()" method="post">
+     				<input type="hidden" name="enquiryType" id ="enquiryType" value="Contact from website" />
+      				<p>
+       					<input type="number" name="telephoneNumber" id="telephoneNumber" placeholder="Telephone Number" required/>
+        				<br />
+        				<input type="text" name="customerName" id="customerName" placeholder="Name" required/>
+        				<br />
+        				<input type="email" name="email"  id="email" placeholder="Email" required/>
+        				<br />
+        				<input type="text" name="company" id="company" placeholder="Company" required/>
+      				</p>
+      				<p id="form-text">Please tick which area you are interested in
+       					<br>
+       					<input type="checkbox" name="VehiclePreparation" value="yes"  />
+        
+        				Vehicle Preparation
+       
+        				<input type="checkbox" name="Logistics" value="yes"  />
+        				Logistics
+
+        				<input type="checkbox" name="BodyShop" value="yes"  />
+        				Body shop
+        			</p>
+        				<input type="submit" value="SUBMIT" class="submit">
+    			</form>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: auto; background: white;">
+		<div class="content">
+			<div style="height: 120px; width: 100%; max-width: 350px; background:url(links/car-logos.jpg); background-position: center; background-repeat: no-repeat; background-size: contain; margin: 0 auto; margin-top: 30px;">
+			</div>
+			<div class="header" style="margin-bottom: 30px;">
+				<p class="text" style="color: rgba(11,30,96,1.00)">GEFCO IS THE ANSWER TO STRESS-FREE, PRE-DISTRIBUTION INSPECTIONS <b>FROM ONLY £75 PER VEHICLE</b></p>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: auto; background-color:rgba(127,127,127,1.00);">
+		<div class="content">
+			<div style="height: 100px; width: 100px; margin: 0 auto;">
+				<a href="http://uk.gefco.net/">
+					<div class="gefco-box">
+					</div>
+				</a>
+			</div>	
+			<div style="width: 100px; height: 70px; margin: 0 auto; margin-top: 20px; margin-bottom:30px;">
+				<div style="width: 100px; height:30px;">
+					<p style="text-align: center; line-height: 1em; color: white;">JOIN US</p>
+				</div>
+				<a href="http://twitter.com/GEFCO_Group?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+				<div style="width: 40px; height: 40px; background: url(links/social-media-1.jpg); display: inline-block;">
+				</div></a><div style="width: 20px; height: 40px; display: inline-block;">
+				</div><a href="http://uk.linkedin.com/company/gefco"><div style="width: 40px; height: 40px; background:url(links/social-media-2.jpg); display: inline-block;">
+				</div></a>			
+			</div>
+		</div>
+	</div>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106003186-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
